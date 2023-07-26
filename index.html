@@ -7,6 +7,25 @@
     <!-- tailwind and daisyUi -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind customization -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              'sm': '32 0px',
+              // => @media (min-width: 576px) { ... }
+
+              'md': '960px',
+              // => @media (min-width: 960px) { ... }
+
+              'lg': '1440px',
+              // => @media (min-width: 1440px) { ... }
+              },
+          }
+        }
+      }
+    </script>
     <!-- font family -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
@@ -18,50 +37,56 @@
 <body class="font-type">
     <header>
         <!-- navbar section -->
-        <nav class="bg-[#F85559] max-w-[1440px] mx-auto rounded-full">
-            <div class="navbar ">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <label tabindex="0" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                      </label>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52">
-                        <li><a class="text-sm bg-[#F85559]">Home</a></li>
-                        <li><a class="text-sm bg-[#F85559]">About Us</a></li>
-                        <li><a class="text-sm bg-[#F85559]">Shop</a></li>
-                        <li><a class="text-sm bg-[#F85559]">All fruit</a></li>
-                        <span class="flex items-center relative">
-                          <input class="mr-5 w-30 px-4 py-2 rounded-full " type="text" placeholder="Search here">
-                          <svg class="absolute right-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3964 3.78947 12.4887 2.99927 10.4995 2.99927C8.51029 2.99927 6.60256 3.78947 5.19599 5.19605C3.78941 6.60262 2.99921 8.51035 2.99921 10.4995C2.99921 12.4887 3.78941 14.3965 5.19599 15.803C6.60256 17.2096 8.51029 17.9998 10.4995 17.9998C12.4887 17.9998 14.3964 17.2096 15.803 15.803Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </span>
-                    </ul>
-                   
+        <nav class="navbar bg-[#F85559] max-w-[1440px] mx-auto rounded-full flex">
+          <!-- menu section -->
+          <div class="flex-1">
+            <div class="flex gap-2 items-center ">
+              <img class="lg:hidden" src="./images/logo.png" alt="">
+              <h2 class="text-3xl text-white font-semibold lg:hidden">Fruit Burst</h2>
+            </div>
+            <div class="hidden lg:block">
+              <ul class="menu menu-horizontal px-1">
+                <li><a class="text-sm text-white">Home</a></li>
+                <li><a class="text-sm text-white">About Us</a></li>
+                <li><a class="text-sm text-white">Shop</a></li>
+                <li><a class="text-sm text-white">All fruit</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- logo section -->
+          
+           <div class="lg:flex-1">
+            <div class="flex gap-2 items-center">
+              <img class="hidden lg:block" src="./images/logo.png" alt="">
+              <h2 class="hidden lg:block text-3xl text-white font-semibold  ">Fruit Burst</h2>
+            </div>
+           </div>
+          
+          <!-- search -->
+          <div>
+            <div class="form-control">
+              <input type="text" placeholder="Search here" class="input input-bordered mr-5 px-4 py-2 rounded-full hidden lg:block" />
+            </div>
+          </div>
+          <!-- dropdown -->
+          <div>
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              </label>
+              <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a class="text-sm">Home</a></li>
+                <li><a class="text-sm">About Us</a></li>
+                <li><a class="text-sm">Shop</a></li>
+                <li><a class="text-sm">All fruit</a></li>
+                <li>
+                  <div class="form-control">
+                    <input type="text" placeholder="Search here" class="input input-bordered mr-5 px-4 py-2 w-full rounded-full lg:block" />
                   </div>
-                  <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                      <li><a class="text-sm text-white">Home</a></li>
-                      <li><a class="text-sm text-white">About Us</a></li>
-                      <li><a class="text-sm text-white">Shop</a></li>
-                      <li><a class="text-sm text-white">All fruit</a></li>
-                    </ul>
-                  </div>
-                  
-                </div>
-                <div class="flex gap-2 items-center w-[300px]">
-                  <img src="./images/logo.png" alt="">
-                  <h2 class="text-3xl text-white font-semibold">Fruit Burst</h2>
-                </div>
-                <div class="navbar-end hidden lg:flex">
-                  <span class="flex items-center relative">
-                    <input class="mr-5 px-4 py-2  rounded-full " type="text" placeholder="Search here">
-                    <svg class="absolute right-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3964 3.78947 12.4887 2.99927 10.4995 2.99927C8.51029 2.99927 6.60256 3.78947 5.19599 5.19605C3.78941 6.60262 2.99921 8.51035 2.99921 10.4995C2.99921 12.4887 3.78941 14.3965 5.19599 15.803C6.60256 17.2096 8.51029 17.9998 10.4995 17.9998C12.4887 17.9998 14.3964 17.2096 15.803 15.803Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                </div>
-              </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
     </header>
     <main>
