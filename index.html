@@ -13,7 +13,7 @@
         theme: {
           extend: {
             screens: {
-              'sm': '32 0px',
+              'sm': '320px',
               // => @media (min-width: 576px) { ... }
 
               'md': '960px',
@@ -37,7 +37,7 @@
 <body class="font-type">
     <header>
         <!-- navbar section -->
-        <nav class="navbar bg-[#F85559] max-w-[1440px] mx-auto rounded-full flex">
+        <nav class="navbar bg-[#F85559] max-w-[90%] mx-auto rounded-full flex">
           <!-- menu section -->
           <div class="flex-1">
             <div class="flex gap-2 items-center ">
@@ -90,17 +90,17 @@
         </nav>
 
         <!-- banner section -->
-        <section class="max-w-[1440px] mx-auto">
-          <div class="carousel">
-            <div id="slide1" class="carousel-item relative w-full">
+        <section class="max-w-[90%] mx-auto mt-5 lg:mt-10">
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full ">
               <!-- slide 1 -->
-              <div class="hero min-h-screen" style="background-image: url('./images/banner1.png');">
+              <div class="hero w-full" style="background-image: url(./images/banner1.png);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
-                  <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button class="btn btn-primary">Get Started</button>
+                  <div class="max-w-md ">
+                    <h1 class="mb-5 text-5xl md:text-7xl text-white font-bold ">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5 text-xl text-white">We supply highly quality organic products</p>
+                    <button class="btn bg-[#F85559] text-white hover:text-black">Shop Now</button>
                   </div>
                 </div>
               </div>
@@ -109,15 +109,15 @@
                 <a href="#slide2" class="btn btn-circle">❯</a>
               </div>
             </div> 
-            <div id="slide2" class="carousel-item relative w-full">
+            <div id="slide2" class="carousel-item relative w-full h-[80vh]">
               <!-- slide 2 -->
-              <div class="hero min-h-screen" style="background-image: url('./images/banner2.png');">
+              <div class="hero " style="background-image: url(./images/banner2.png);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
                   <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button class="btn btn-primary">Get Started</button>
+                    <h1 class="mb-5 text-5xl md:text-7xl text-white font-bold ">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5 text-xl text-white">We supply highly quality organic products</p>
+                    <button class="btn bg-[#F85559] text-white hover:text-black">Shop Now</button>
                   </div>
                 </div>
               </div>
@@ -126,15 +126,15 @@
                 <a href="#slide3" class="btn btn-circle">❯</a>
               </div>
             </div> 
-            <div id="slide3" class="carousel-item relative w-full">
+            <div id="slide3" class="carousel-item relative w-full h-[80vh]">
               <!-- slide 3 -->
-              <div class="hero min-h-screen" style="background-image: url('./images/banner3.png');">
+              <div class="hero " style="background-image: url(./images/banner3.png);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
                   <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button class="btn btn-primary">Get Started</button>
+                    <h1 class="mb-5 text-5xl md:text-7xl text-white font-bold ">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5 text-xl text-white">We supply highly quality organic products</p>
+                    <button class="btn bg-[#F85559] text-white hover:text-black">Shop Now</button>
                   </div>
                 </div>
               </div>
@@ -143,15 +143,15 @@
                 <a href="#slide4" class="btn btn-circle">❯</a>
               </div>
             </div> 
-            <div id="slide4" class="carousel-item relative w-full">
+            <div id="slide4" class="carousel-item relative w-full h-[80vh]">
               <!-- slide 4 -->
-              <div class="hero min-h-screen" style="background-image: url(./images/banner4.png);">
+              <div class="hero " style="background-image: url(./images/banner4.png);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
                   <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button class="btn btn-primary">Get Started</button>
+                    <h1 class="mb-5 text-5xl md:text-7xl text-white font-bold ">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5 text-xl text-white">We supply highly quality organic products</p>
+                    <button class="btn bg-[#F85559] text-white hover:text-black">Shop Now</button>
                   </div>
                 </div>
               </div>
@@ -162,6 +162,7 @@
             </div>
           </div>
         </section>
+        <!-- bonus section -->
     </header>
     <main>
 
